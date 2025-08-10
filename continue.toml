@@ -1,0 +1,30 @@
+# Continue.dev Project Configuration
+
+[project]
+name = "BankStatementsConsolidator"
+description = "A Python Streamlit app to consolidate bank statements from various banks into a unified format. Easily upload, parse, and export your financial data."
+language = "python"
+framework = "streamlit"
+
+[tasks]
+clarify_requirements = true
+scaffold_project = true
+customize_project = true
+install_required_extensions = false
+compile_project = true
+create_and_run_task = true
+launch_project = true
+ensure_documentation_complete = true
+
+[files]
+readme = "README.md"
+requirements = "requirements.txt"
+app = "app.py"
+copilot_instructions = ".github/copilot-instructions.md"
+
+[extensions]
+# No required extensions specified
+
+[documentation]
+readme = true
+copilot_instructions = true
