@@ -1,5 +1,5 @@
 import streamlit as st
-import pandas as pd
+from src.bank_statements_consolidator.app import consolidate_statements
 
 st.title('Bank Statements Consolidator')
 
@@ -9,7 +9,9 @@ uploaded_files = st.file_uploader('Choose bank statement files', accept_multiple
 
 if uploaded_files:
     st.write(f'You uploaded {len(uploaded_files)} files.')
-    # Placeholder for parsing and consolidation logic
-    st.info('Parsing and consolidation logic will go here.')
+    # Call CLI logic for consolidation
+    consolidated = consolidate_statements(uploaded_files)
+    st.write('Consolidated Data:')
+    st.dataframe(consolidated)
 else:
     st.info('Please upload bank statement files.')
